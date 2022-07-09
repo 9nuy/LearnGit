@@ -14,6 +14,14 @@ Git 分布式版本控制软件
 
  ![](https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg)
 
+## 配置文件
+
+```
+# 设置提交的用户信息
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
 ## 创建仓库
 
 ### git init
@@ -51,14 +59,14 @@ git add .  # 添加当前目录下的所有文件到暂存区
 ### git commit
 
 ```
-# 设置提交的用户信息
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
+git commit -m [message] # 提交暂存区到本地仓库
+git commit file1 file 2-m [message] # 提交暂存区的指定文件到本地仓库
 ```
 
 ```
-git commit -m [message] # 提交暂存区到本地仓库
-git commit file1 file 2-m [message] # 提交暂存区的指定文件到本地仓库
+# 快速提交被修改或删除的文件
+git commit -a -m
+git commit -am
 ```
 
 ### git reset
@@ -130,14 +138,14 @@ git merge (branchname)  # 合并分支
 
 ```
 git branch dev  # 开发功能
-git add.
+git add .
 git commit -m ...
 git branch master
 ```
 
 ```
 git branch bug  # 修复bug
-git add.
+git add .
 git commit -m ...
 git branch master
 git merge bug
@@ -157,6 +165,7 @@ git merge dev
 
 ```
 git remote  # 查看当前的远程仓库
+git remote -v
 git remote add [shortname] [url]  # 添加远程仓库
 git remote rm [别名]  # 删除远程仓库
 ```
@@ -166,7 +175,7 @@ git remote rm [别名]  # 删除远程仓库
 * URL实现
 
 ```
-git remote add origin https://github.com/...
+# git remote add origin https://github.com/...
 git remote add origin https://用户名:密码@github.com/...
 ```
 
